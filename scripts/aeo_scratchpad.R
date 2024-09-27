@@ -24,14 +24,41 @@ eia_metadata("aeo/2023")
 eia_facets("aeo/2023", "seriesId")
 
 
-aeo_test <- eia_data(
-  dir = "aeo/2023",
-  data = 'value',
-  facets = c(scenario = 'ref2023',
-             seriesId = 'emi_co2_ten_NA_NA_NA_NA_millmetnco2'),
-  freq = 'annual',
-  start = '2025',
-  end = '2035'
-)
+aeo = read_csv("AEO_mapping_template.csv") %>%
+  mutate(Series_template = tolower(Series_template),
+         Series_template = str_replace_all(Series_template, "_na", "_NA"))
 
-test = tolower("EMI_CO2_TEN_NA_NA_NA_NA_MILLMETNCO2")
+seriesIDs = aeo$Series_template
+
+aeo_pull = list()
+
+for(i in length(seriesIDs)) {
+  aeo_pull_i <- eia_data(
+    dir = "aeo/2023",
+    data = 'value',
+    facets = c(scenario = 'ref2023',
+               seriesId = seriesIDs[i]),
+    freq = 'annual',
+    start = '2025',
+    end = '2035'
+  )
+  
+  aeo_pull[[i]] = aeo_pull_i
+}
+
+aeo_pull_full = rbind(aeo_pull)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
