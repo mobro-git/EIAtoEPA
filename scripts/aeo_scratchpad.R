@@ -130,6 +130,18 @@ tbl2 = eia_data(
   offset=5000
 )
 
+###
+
+remotes::install_github("jameelalsalam/eia2")
+library(eia2)
+
+tbl2 = eia2_data_big(
+  route = "aeo/2023",
+  data_cols = "value",
+  facets = list(
+    scenario = c("ref2023","highogs","lowogs","highmacro","lowmacro"),
+    tableId = 9)
+)
 
 
 
