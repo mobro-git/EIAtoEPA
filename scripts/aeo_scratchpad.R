@@ -21,7 +21,30 @@ eia_dir("aeo/2023")
 eia_metadata("aeo/2023")
 
 # explore options for facets within a subdirectory
-eia_facets("aeo/2023", "seriesId")
+aeo_history = eia_facets("aeo/2023", "history")
+aeo_scenario = eia_facets("aeo/2023", "scenario")
+aeo_tableId = eia_facets("aeo/2023", "tableId")
+aeo_seriesId = eia_facets("aeo/2023", "seriesId")
+aeo_regionId = eia_facets("aeo/2023", "regionId")
+
+# possible way to specify parameters for eia_data() function
+
+# (1) 
+aeo_dir = c("aeo/2023", "aeo/2022", "aeo/2021")
+aeo_2023_scen = c("ref2023", "highogs", "lowogs", "lowmacro", "highmacro")
+
+# (2) 
+aeo_2023 = list(
+  dir = "aeo/2023",
+  scen = c("ref2023", "highogs", "lowogs", "lowmacro", "highmacro")
+)
+aeo_2022 = list(
+  dir = "aeo/2022",
+  scen = c("ref2022", "highogs", "lowogs", "lowmacro", "highmacro")
+)
+
+
+
 
 
 aeo = read_csv("AEO_mapping_template.csv") %>%
