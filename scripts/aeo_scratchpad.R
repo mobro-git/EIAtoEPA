@@ -60,7 +60,8 @@ for(i in length(seriesIDs)) {
     dir = "aeo/2023",
     data = 'value',
     facets = c(scenario = 'ref2023',
-               seriesId = seriesIDs[i]),
+               seriesId = seriesIDs[i],
+               regionId = "United States"),
     freq = 'annual',
     start = '2025',
     end = '2035'
@@ -72,9 +73,27 @@ for(i in length(seriesIDs)) {
 aeo_pull_full = rbind(aeo_pull)
 
 
+# single id test
+pet_import_seriesid = "trad_imp_ten_NA_cr_NA_usa_qbtu"
 
+aeo_pull_i <- eia_data(
+  dir = "aeo/2023",
+  data = 'value',
+  facets = c(scenario = 'ref2023',
+             seriesId = "trad_imp_ten_NA_cr_NA_usa_qbtu",
+             regionId = "United States")
+  # ,
+  # freq = 'annual',
+  # start = '2025',
+  # end = '2035'
+)
 
-
+test = eia_data(dir = "aeo/2023",
+         facets = c(scenario = "ref2023",
+                    seriesId = "trad_imp_ten_NA_cr_NA_usa_qbtu"),
+         freq = 'annual',
+         start = '2022',
+         end = '2050')
 
 
 
