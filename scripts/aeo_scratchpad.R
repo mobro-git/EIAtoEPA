@@ -47,9 +47,15 @@ aeo_2022 = list(
 
 
 
-aeo = read_csv("AEO_mapping_template.csv") %>%
+aeo = read_csv("AEO_mapping_template_newAPI.csv") %>%
   mutate(Series_template = tolower(Series_template),
          Series_template = str_replace_all(Series_template, "_na", "_NA"))
+
+test123 = aeo %>%
+  select(Series_Name,Series_template) %>%
+  rename(id = Series_template) %>%
+  distinct(id, Series_Name) %>%
+  left_join(aeo_seriesId, by = "id")
 
 seriesIDs = aeo$Series_template
 
@@ -95,9 +101,34 @@ test = eia_data(dir = "aeo/2023",
          start = '2022',
          end = '2050')
 
+test_sm = eia_data(dir = "aeo/2023",
+                facets = c(scenario = "ref2023",
+                           seriesId = "trad_imp_ten_NA_cr_NA_usa_qbtu"))
 
 
+usa = aeo_seriesId %>% filter(str_detect(id, "_usa")) %>% head(5)
 
+ind = eia_data(
+  dir = "aeo/2023",
+  facets = list(
+    scenario = c("ref2023","highogs"),
+    seriesId = unique(usa$id))
+)
+
+tbl = eia_data(
+  dir = "aeo/2023",
+  facets = list(
+    scenario = c("ref2023","highogs","lowogs","highmacro","lowmacro"),
+    tableId = 9)
+)
+
+tbl2 = eia_data(
+  dir = "aeo/2023",
+  facets = list(
+    scenario = c("ref2023","highogs","lowogs","highmacro","lowmacro"),
+    tableId = 9),
+  offset=5000
+)
 
 
 
