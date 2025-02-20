@@ -18,7 +18,7 @@ eia_dir("aeo/2023")
 # Use `eia_metadata("aeo/2023")` to explore this data.
 
 # explore data available in a subdirectory
-eia_metadata("aeo/2023")
+meta <- eia_metadata("aeo/2023")
 
 # explore options for facets within a subdirectory
 aeo_history = eia_facets("aeo/2023", "history")
@@ -47,9 +47,11 @@ aeo_2022 = list(
 
 
 
-aeo = read_csv("AEO_mapping_template_newAPI.csv") %>%
+aeo_old = read_csv("AEO_mapping_template_newAPI.csv") %>%
   mutate(Series_template = tolower(Series_template),
-         Series_template = str_replace_all(Series_template, "_na", "_NA"))
+         Series_template = str_replace_all(Series_template, "_na", "_NA")) 
+write_csv(aeo_old, "mapping/aeo_mapping.csv")
+aeo = read_csv("mapping/aeo_mapping.csv")
 
 test123 = aeo %>%
   select(Series_Name,Series_template) %>%
@@ -132,10 +134,8 @@ tbl2 = eia_data(
 
 ###
 
-remotes::install_github("jameelalsalam/eia2")
-library(eia2)
 
-tbl2 = eia2_data_big(
+tbl3 = eia2_data_big(
   route = "aeo/2023",
   data_cols = "value",
   facets = list(
@@ -143,7 +143,31 @@ tbl2 = eia2_data_big(
     tableId = 9)
 )
 
+tbl4 = eia2_data_big(
+  route = "aeo/2023",
+  data_cols = "value",
+  facets = list(
+    scenario = c("ref2023"),
+    seriesId = unique(aeo$Series_template))
+)
 
+
+
+# errors out, doesnt seem that you can supply multiple scenarios and multiple seriesId, only one can have multiples?
+tbl5 = eia2_data_big(
+  route = "aeo/2023",
+  data_cols = "value",
+  facets = list(
+    scenario = c("ref2023","highogs"),
+    seriesId = unique(aeo$Series_template))
+)
+
+tbl6 = eia_data(
+  dir = "aeo/2023",
+  facets = list(
+    scenario = c("ref2023","highogs","lowogs","highmacro","lowmacro"),
+    seriesId = unique(aeo$Series_template))
+)
 
 
 
