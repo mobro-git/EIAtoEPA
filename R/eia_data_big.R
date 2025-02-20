@@ -1,4 +1,9 @@
+
 if (FALSE) {
+  
+  map = read_csv("mapping/aeo_mapping_combo_test.csv")
+  ids = unique(map$seriesId)
+  
   debugonce(eia_data_big)
   data_eia = eia_data_big(
     dir = "aeo/2023",
@@ -17,55 +22,82 @@ if (FALSE) {
       tableId = 1:8)
   )
   
+  data_big2 = eia_data_big(
+    dir = "aeo/2023",
+    data = "value",
+    facets = list(
+      scenario = c("ref2023","highogs"),
+      seriesId = unique(map$seriesId))
+  )
+  
+  dir = "aeo/2023"
+  data = "value"
+  facets = list(
+    scenario = c("ref2023","highogs","lowogs"),
+    seriesId = unique(map$seriesId)
+  )
+  
 }
 
-eia_data_big <- function(dir,
-                         data = NULL, facets = NULL,
-                         freq = NULL, start = NULL, end = NULL,
-                         sort = NULL, length = NULL, #offset = NULL,
-                         tidy = TRUE, check_metadata = FALSE, cache = TRUE,
-                         key = eia_get_key()) {
-  
-  eia_data_big_first(dir, data, facets, freq, start, end, sort, length, tidy, key)
-  
+eia_data_big = function (dir, data = NULL, facets = NULL,
+                           freq = NULL, start = NULL, end = NULL,
+                           sort = NULL, length = NULL, offset = NULL,
+                           tidy = TRUE, check_metadata = FALSE, 
+                           key = eia_get_key()){
+  eia:::.key_check(key)
+  if (check_metadata) {eia:::.eia_metadata_check(dir, data, facets, freq, start, end, key)} # TODO: check why check fails
+  else {eia_data_handle_big(dir,data,facets,freq,start,end,sort,length,offset,tidy,key)}
   
 }
 
-eia_data_big_first <- function(dir, data, facets, freq, start, end, sort, length, tidy, key){
+eia_data_handle_big <- function (dir, data, facets, freq, start, end, sort, length, offset, tidy, key) {
   
-  #defaults
-  offset <- 0
-  
-  # build and do api call
+  # build and perform API call
   r <- eia:::.eia_get(eia:::.eia_data_url(dir, data, facets, freq, start, end, sort, length, offset, key))
+  
+  # return raw API character string
+  if (is.na(tidy)) {return(r)}
   
   # response processing
   r <- jsonlite::fromJSON(r)
   
-  if (!is.null(r$response$warnings) & r$response$warnings[[1]] != "incomplete return" & is.null(length)){
+  # return raw API response
+  if (!tidy) {return(r)}
+  
+  # returning data
+  response_total = as.numeric(r$response$total)
+  
+  # TODO: need to handle if there are no warnings, "Error in if (!is.null(r$response$warnings) & r$response$warnings[[1]] !=  : argument is of length zero
+  if (!is.null(r$response$warnings) && r$response$warnings[[1]] != "incomplete return" && is.null(length)) {
     wrngs <- paste0(r$response$warnings[[1]], "\n", r$response$warnings[[2]])
-    warning(wrngs, "\nTotal available rows: ", r$response$total, call. = FALSE)
+    warning(wrngs, "\nTotal available rows: ", response_total, 
+            call. = FALSE)
   } else {
-    if (as.numeric(r$response$total) == 0)
-      stop("No data available - check temporal inputs.", call. = FALSE)
-    if (nrow(r$response$data) != as.numeric(r$response$total))
-      message("Rows returned: ", nrow(r$response$data), "\nRows available: ", r$response$total)
-      response_data = eia_data_big_the_rest(dir, data, facets, freq, start, end, sort, length, tidy, key, total = as.numeric(r$response$total))
-    
+    # no data available handling
+    if (response_total == 0) 
+      stop("No data available - check temporal inputs.", 
+           call. = FALSE)
+    # handling for 5000 or fewer responses (API return limit)
+    if(response_total <= 5000) {
+      response_data = tibble::as_tibble(r$response$data)}
+    # handling for over 5000 responses
+    if (nrow(r$response$data) != response_total) 
+      message("Rows returned: ", nrow(r$response$data), 
+              "\nRows available: ", response_total)
+    response_data = eia_data_multiple_calls(dir, data, facets, freq, start, end, sort, length, tidy, key, total = response_total)
   }
-  if(as.numeric(r$response$total) <= 5000) {
-    response_data = tibble::as_tibble(r$response$data)}
+  
   return(response_data)
+  
 }
 
-eia_data_big_the_rest <- function(dir, data, facets, freq, start, end, sort, length, tidy, key, total){
-  
+eia_data_multiple_calls <- function(dir, data, facets, freq, start, end, sort, length, tidy, key, total) {
   
   total_length <- min(total, length)
   num_requests <- ceiling(total_length / 5000)
   
   stopifnot(num_requests > 0)
-  if(num_requests > 10) {} #do the thing where we ask the user
+  if(num_requests > 10) {} # TODO: do the thing where we ask the user
   message("Proceeding to request all available data", "\nRequests Needed: ", num_requests)
   
   list_data <- list()
