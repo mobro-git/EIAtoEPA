@@ -1,43 +1,4 @@
 
-if (FALSE) {
-  
-  map = read_csv("mapping/aeo_mapping_combo_test.csv")
-  ids = unique(map$seriesId)
-  
-  debugonce(eia_data_big)
-  data_eia = eia_data_big(
-    dir = "aeo/2023",
-    data = "value",
-    facets = list(
-      scenario = c("ref2023","highogs"),
-      seriesId = c("trad_imp_ten_NA_cr_NA_usa_qbtu","trad_imp_ten_NA_lfl_NA_usa_qbtu" ))
-  )
-  
-  debugonce(.eia_data_big_the_rest)
-  data_big = eia_data_big(
-    dir = "aeo/2023",
-    data = "value",
-    facets = list(
-      scenario = c("ref2023","highogs"),
-      tableId = 1:8)
-  )
-  
-  data_big2 = eia_data_big(
-    dir = "aeo/2023",
-    data = "value",
-    facets = list(
-      scenario = c("ref2023","highogs"),
-      seriesId = unique(map$seriesId))
-  )
-  
-  dir = "aeo/2023"
-  data = "value"
-  facets = list(
-    scenario = c("ref2023","highogs","lowogs"),
-    seriesId = unique(map$seriesId)
-  )
-  
-}
 
 eia_data_big = function (dir, data = NULL, facets = NULL,
                            freq = NULL, start = NULL, end = NULL,
@@ -45,7 +6,8 @@ eia_data_big = function (dir, data = NULL, facets = NULL,
                            tidy = TRUE, check_metadata = FALSE, 
                            key = eia_get_key()){
   eia:::.key_check(key)
-  if (check_metadata) {eia:::.eia_metadata_check(dir, data, facets, freq, start, end, key)} # TODO: check why check fails
+  # TODO: check_metadata fails, something to do with "id" column  in .eia_md_check function
+  if (check_metadata) {eia:::.eia_metadata_check(dir, data, facets, freq, start, end, key)} 
   else {eia_data_handle_big(dir,data,facets,freq,start,end,sort,length,offset,tidy,key)}
   
 }

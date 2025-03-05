@@ -13,17 +13,27 @@ tar_option_set(
   error = "abridge"
 )
 
-list(
+tar_plan(
   
-  # AEO mapping ----
-  tar_target(aeo_mapping_new_macro_csv, ),
-  tar_target()
+  # config ----
+  config = list(
+    aeo_yr = c(2019, 2020, 2021, 2022, 2023),
+    aeo_scen = c( # !!! reference scenarios automatically selected
+      # high and low oil and gas supply
+      "highogs", "lowogs",
+      # high and low economic growth
+      "highmacro", "lowmacro"
+      )
+  ),
   
+  # AEO ----
   
-  macro = read_csv("mapping/aeo_mapping_new_macro_working.csv")
-  old = read_csv("mapping/aeo_mapping_orig_tested_reorg.csv")
-  all = rbind(macro, old)
+  ## mapping ----
+  tar_target(aeo_mapping_csv, "mapping/aeo_mapping.csv", format = "file"),
+  aeo_mapping = read_csv("mapping/aeo_mapping.csv"),
   
-  all_reorg = all %>% arrange(seriesId)
+  ## data ----
+  aeo_raw = get_aeo_raw(aeo_mapping, config),
+  aeo_mapped = map_aeo_raw(aeo_raw, aeo_mapping)
 
 )

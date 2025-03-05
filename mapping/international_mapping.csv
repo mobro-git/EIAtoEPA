@@ -1,0 +1,13 @@
+Variable,description,frequency,activityId,activity_name,productId,product_name,countryRegionId,multiplier,notes1,notes2
+Capacity|Electricity,Electricity installed capacity,annual,7,Capacity,2,Electricity,USA,1,,
+Capacity|Electricity|Biomass,Biomass and waste electricity installed capacity,annual,7,Capacity,38,Biomass and waste,USA,1,,
+Capacity|Electricity|Geothermal,Geothermal electricity installed capacity,annual,7,Capacity,35,Geothermal,USA,1,,
+Capacity|Electricity|Hydro,Hydroelectricity installed capacity,annual,7,Capacity,33,Hydroelectricity,USA,1,,
+Capacity|Electricity|Nuclear,Nuclear electricity installed capacity,annual,7,Capacity,27,Nuclear,USA,1,,
+Capacity|Electricity|Solar,Solar electricity installed capacity,annual,7,Capacity,116,Solar,USA,1,,
+Capacity|Electricity|Storage Capacity|PSH,Hydroelectric pumped storage electricity installed capacity,annual,7,Capacity,82,Hydroelectric pumped storage,USA,1,,
+Capacity|Electricity|Wind,Wind electricity installed capacity,annual,7,Capacity,37,Wind,USA,1,,
+Final Energy|Electricity,Electricity net consumption,annual,2,Consumption,2,Electricity,USA,1,,
+Primary Energy|Coal,Total energy consumption from coal,annual,2,Consumption,4477,Coal,USA,1,,
+,GDP at purchasing power parities,annual,34,GDP,4701,Gross domestic product,USA,1,in billion $ at purchasing power parities,
+,GDP at purchasing power parities,annual,34,GDP,47,Energy intensity,USA,1,thousand Btu/USD at purchasing power parities,

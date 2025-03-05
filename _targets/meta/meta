@@ -1,0 +1,12 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+aeo_mapping|stem|a93a26f499722fa6|fdc26d984076783a|2c530c1562a7fbd1|-441644281||t20150.7726961512s|s4656b|4656|rds|local|vector|||0.703||
+aeo_mapping_csv|stem|90b7a51b9d83d552|2c8244b2bae75bda|2c530c1562a7fbd1|-443765243|mapping/aeo_mapping.csv|t20139.8867000958s|s24546b|24546|file|local|vector|||0||
+config|stem|d53175b74e4879d8|8a172fdf1f4db814|2c530c1562a7fbd1|-1931060652||t20150.7726967655s|s144b|144|rds|local|vector|||0||
+map_aeo_raw|function|873ee296836c711d
+eia_data_multiple_calls|function|ceb1efa78467d3f1
+eia_data_big_the_rest|function|ceb1efa78467d3f1
+eia_data_handle_big|function|f78456c1d8d7ad2b
+eia_data_big_first|function|31d31d62efa18424
+eia_data_big|function|b89e016319a3a544
+get_aeo_raw|function|013ac5728e116c6b
+aeo_raw|stem|60eb43405a802087|f7ec91048ccf1212|fe7ad41dce8a43a3|-1543186914||t20150.7736442339s||889001|rds|local|vector|||78.421||Cant select columns that dont exist. Column everything doesnt exist.

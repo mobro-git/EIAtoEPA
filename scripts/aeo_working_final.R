@@ -1,6 +1,6 @@
-# pull in necessary packages
+# pull in necessary packages and functions
 source('packages.R')
-
+tar_source()
 #------------------------------------------------------------------------------
 
 ## test data to work with
@@ -23,10 +23,10 @@ data_raw_all_2023 = eia_data_big(
     seriesId = unique(map$seriesId))
 )
 
-data_mapped_2023 = data_raw %>%
+data_mapped_2023 = data_raw_all_2023 %>%
   left_join(map, by = "seriesId")
 
-data_cleaned_2023 = data_mapped %>%
+data_cleaned_2023 = data_mapped_2023 %>%
   rename(year = period,
          seriesName = seriesName.x) %>%
   select(-seriesName.y) %>%
@@ -45,10 +45,10 @@ data_raw_all_2022 = eia_data_big(
     seriesId = unique(map$seriesId))
 )
 
-data_mapped_2022 = data_raw %>%
+data_mapped_2022 = data_raw_all_2022 %>%
   left_join(map, by = "seriesId")
 
-data_cleaned_2022 = data_mapped %>%
+data_cleaned_2022 = data_mapped_2022 %>%
   rename(year = period,
          seriesName = seriesName.x) %>%
   select(-seriesName.y) %>%
