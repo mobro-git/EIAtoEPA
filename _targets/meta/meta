@@ -1,12 +1,25 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-aeo_mapping|stem|a93a26f499722fa6|fdc26d984076783a|2c530c1562a7fbd1|-441644281||t20150.7726961512s|s4656b|4656|rds|local|vector|||0.703||
-aeo_mapping_csv|stem|90b7a51b9d83d552|2c8244b2bae75bda|2c530c1562a7fbd1|-443765243|mapping/aeo_mapping.csv|t20139.8867000958s|s24546b|24546|file|local|vector|||0||
-config|stem|d53175b74e4879d8|8a172fdf1f4db814|2c530c1562a7fbd1|-1931060652||t20150.7726967655s|s144b|144|rds|local|vector|||0||
 map_aeo_raw|function|873ee296836c711d
 eia_data_multiple_calls|function|ceb1efa78467d3f1
-eia_data_big_the_rest|function|ceb1efa78467d3f1
+map_electricity_raw|function|709c5e85ae4521cc
 eia_data_handle_big|function|f78456c1d8d7ad2b
-eia_data_big_first|function|31d31d62efa18424
-eia_data_big|function|b89e016319a3a544
-get_aeo_raw|function|013ac5728e116c6b
-aeo_raw|stem|60eb43405a802087|f7ec91048ccf1212|fe7ad41dce8a43a3|-1543186914||t20150.7736442339s||889001|rds|local|vector|||78.421||Cant select columns that dont exist. Column everything doesnt exist.
+eia_data_big|function|cd04bc0d6adc940b
+get_aeo_raw|function|8b2d6dd11b309d86
+get_electricity_raw|function|9be072f5375331df
+electricity_mapping_csv|stem|b61a3a6b7dee37ac|22b92143a7c1e965|2c530c1562a7fbd1|1607336118|mapping/electricity_mapping.csv|t20157.8432814423s|s6825b|6825|file|local|vector|||0||
+aeo_mapping_csv|stem|90b7a51b9d83d552|2c8244b2bae75bda|2c530c1562a7fbd1|-443765243|mapping/aeo_mapping.csv|t20139.8867000958s|s24546b|24546|file|local|vector|||0||
+totalenergy_mapping_csv|stem|d7245075525322b5|60b884d43b67250c|2c530c1562a7fbd1|1266579840|mapping/totalenergy_mapping.csv|t20157.8437349733s|s17399b|17399|file|local|vector|||0||
+seds_mapping_csv|stem|dffd728840de2408|2a16d45020502a8a|2c530c1562a7fbd1|-148332722|mapping/seds_mapping.csv|t20157.8436447261s|s614b|614|file|local|vector|||0||
+emissions_mapping_csv|stem|0351f9f19389ea78|11275f56c48880ec|2c530c1562a7fbd1|1796858884|mapping/emissions_mapping.csv|t20157.8434588661s|s7450b|7450|file|local|vector|||0||
+international_mapping_csv|stem|db18c1f2913e3b56|b44c4160acbd99b1|2c530c1562a7fbd1|-1372429505|mapping/international_mapping.csv|t20157.8435591711s|s3829b|3829|file|local|vector|||0||
+config|stem|d53175b74e4879d8|8a172fdf1f4db814|2c530c1562a7fbd1|-1931060652||t20158.5607907964s|s144b|144|rds|local|vector|||0||
+electricity_mapping|stem|04a5c17858e052e9|845abc8b1f9b2bfc|0bd4673851439a4b|470155499||t20158.5607991648s|s1184b|1184|rds|local|vector|||0.703||
+aeo_mapping|stem|a93a26f499722fa6|7bba25be9ef5e8f6|0a931b047e02c57a|-441644281||t20158.5608003266s|s4656b|4656|rds|local|vector|||0.078||
+totalenergy_mapping|stem|3be27c9c493df7ba|ab9f87c930c072e0|0697f1401f0b863d|-550222063||t20158.5608013643s|s1340b|1340|rds|local|vector|||0.078||
+seds_mapping|stem|470a4ce23b608129|a6868bf2615046c4|fb10367f14348546|-475250826||t20158.5608022721s|s591b|591|rds|local|vector|||0.063||
+emissions_mapping|stem|b69a7a12342e6a04|2476573b5bcae493|7a0268e4b6d4ea12|31963135||t20158.5608033337s|s942b|942|rds|local|vector|||0.078||
+international_mapping|stem|3408b654777319eb|66eec45b1b5c1a08|bca1cd8cb1fbcc48|-122378926||t20158.5608043327s|s1004b|1004|rds|local|vector|||0.063||
+electricity_raw|stem|cd6afb37c82408ee|7515d6800ea4e3f5|569830d4a94a5c27|-473751287||t20158.5609089543s|s9208b|9208|rds|local|vector|||9.032|Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.ℹ Please use all_ofvar or any_ofvar instead of .datavar|
+aeo_raw|stem|3e1008bb0c4f7482|f7ec91048ccf1212|abf4063e5fcd31e0|-1543186914||t20158.5617637923s|s886569b|886569|rds|local|vector|||73.36||
+electricity_mapped|stem|acfdac781a24cebd|e48805eb659ea5f8|d353ae0709a5839e|-278593007||t20158.5617663039s|s4646b|4646|rds|local|vector|||0.172||
+aeo_mapped|stem|f92785d8dd163ae2|1b6f7984f26fb86d|9af7d96cd0fffa8b|-1161599095||t20158.5617765403s|s777661b|777661|rds|local|vector|||0.61|Detected an unexpected manytomany relationship between x and y.ℹ Row 171 of x matches multiple rows in y.ℹ Row 134 of y matches multiple rows in x.ℹ If a manytomany relationship is expected, set relationship   manytomany to silence this warning.|

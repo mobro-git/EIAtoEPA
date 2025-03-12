@@ -1,33 +1,33 @@
-Variable,frequency,stateId,sector-name,sectorId,fuel-name,fuelId,multiplier,notes1,notes2
-Emissions|CO2|Energy|Supply|Electricity,annual,US,electric power co2 emissions,EC,all fuels,TO,1,,
-Emissions|CO2|Energy|Supply|Electricity|Coal,annual,US,electric power co2 emissions,EC,coal,CO,1,,
-Emissions|CO2|Energy|Supply|Electricity|Gas,annual,US,electric power co2 emissions,EC,natural gas,NG,1,,
-Emissions|CO2|Energy|Supply|Electricity|Oil,annual,US,electric power co2 emissions,EC,petroleum,PE,1,,
-Emissions|CO2|Energy|Demand|Buildings|Commercial,annual,US,commercial co2 emissions,CC,all fuels,TO,1,,
-Emissions|CO2|Energy|Demand|Buildings|Commercial|Coal,annual,US,commercial co2 emissions,CC,coal,CO,1,,
-Emissions|CO2|Energy|Demand|Buildings|Commercial|Gas,annual,US,commercial co2 emissions,CC,natural gas,NG,1,,
-Emissions|CO2|Energy|Demand|Buildings|Commercial|Oil,annual,US,commercial co2 emissions,CC,petroleum,PE,1,,
-Emissions|CO2|Energy|Demand|Buildings|Residential,annual,US,residential co2 emissions,RC,all fuels,TO,1,,
-Emissions|CO2|Energy|Demand|Buildings|Residential|Coal,annual,US,residential co2 emissions,RC,coal,CO,1,,
-Emissions|CO2|Energy|Demand|Buildings|Residential|Gas,annual,US,residential co2 emissions,RC,natural gas,NG,1,,
-Emissions|CO2|Energy|Demand|Buildings|Residential|Oil,annual,US,residential co2 emissions,RC,petroleum,PE,1,,
-Emissions|CO2|Energy|Demand|Buildings,annual,US,commercial co2 emissions,CC,all fuels,TO,1,,
-Emissions|CO2|Energy|Demand|Buildings,annual,US,residential co2 emissions,RC,all fuels,TO,1,,
-Emissions|CO2|Energy|Demand|Buildings|Coal,annual,US,commercial co2 emissions,CC,coal,CO,1,,
-Emissions|CO2|Energy|Demand|Buildings|Coal,annual,US,residential co2 emissions,RC,coal,CO,1,,
-Emissions|CO2|Energy|Demand|Buildings|Gas,annual,US,commercial co2 emissions,CC,natural gas,NG,1,,
-Emissions|CO2|Energy|Demand|Buildings|Gas,annual,US,residential co2 emissions,RC,natural gas,NG,1,,
-Emissions|CO2|Energy|Demand|Buildings|Oil,annual,US,commercial co2 emissions,CC,petroleum,PE,1,,
-Emissions|CO2|Energy|Demand|Buildings|Oil,annual,US,residential co2 emissions,RC,petroleum,PE,1,,
-Emissions|CO2|Energy|Demand|Industry,annual,US,industrial co2 emissions,IC,all fuels,TO,1,,
-Emissions|CO2|Energy|Demand|Industry|Coal,annual,US,industrial co2 emissions,IC,coal,CO,1,,
-Emissions|CO2|Energy|Demand|Industry|Gas,annual,US,industrial co2 emissions,IC,natural gas,NG,1,,
-Emissions|CO2|Energy|Demand|Industry|Oil,annual,US,industrial co2 emissions,IC,petroleum,PE,1,,
-Emissions|CO2|Energy|Demand|Transportation,annual,US,transportation co2 emissions,TC,all fuels,TO,1,,
-Emissions|CO2|Energy|Demand|Transportation|Coal,annual,US,transportation co2 emissions,TC,coal,CO,1,,
-Emissions|CO2|Energy|Demand|Transportation|Gas,annual,US,transportation co2 emissions,TC,natural gas,NG,1,,
-Emissions|CO2|Energy|Demand|Transportation|Oil,annual,US,transportation co2 emissions,TC,petroleum,PE,1,,
-Emissions|CO2|Energy,annual,US,total co2 emissions from all sectors,TT,all fuels,TO,1,,
-Emissions|CO2|Energy|Coal,annual,US,total co2 emissions from all sectors,TT,coal,CO,1,,
-Emissions|CO2|Energy|Gas,annual,US,total co2 emissions from all sectors,TT,natural gas,NG,1,,
-Emissions|CO2|Energy|Oil,annual,US,total co2 emissions from all sectors,TT,petroleum,PE,1,,
+variable,frequency,stateId,sector-name,sectorId,fuel-name,fuelId,multiplier,notes1,notes2,source
+Emissions|CO2|Energy|Supply|Electricity,annual,US,electric power co2 emissions,EC,all fuels,TO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Supply|Electricity|Coal,annual,US,electric power co2 emissions,EC,coal,CO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Supply|Electricity|Gas,annual,US,electric power co2 emissions,EC,natural gas,NG,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Supply|Electricity|Oil,annual,US,electric power co2 emissions,EC,petroleum,PE,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Commercial,annual,US,commercial co2 emissions,CC,all fuels,TO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Commercial|Coal,annual,US,commercial co2 emissions,CC,coal,CO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Commercial|Gas,annual,US,commercial co2 emissions,CC,natural gas,NG,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Commercial|Oil,annual,US,commercial co2 emissions,CC,petroleum,PE,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Residential,annual,US,residential co2 emissions,RC,all fuels,TO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Residential|Coal,annual,US,residential co2 emissions,RC,coal,CO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Residential|Gas,annual,US,residential co2 emissions,RC,natural gas,NG,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Residential|Oil,annual,US,residential co2 emissions,RC,petroleum,PE,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings,annual,US,commercial co2 emissions,CC,all fuels,TO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings,annual,US,residential co2 emissions,RC,all fuels,TO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Coal,annual,US,commercial co2 emissions,CC,coal,CO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Coal,annual,US,residential co2 emissions,RC,coal,CO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Gas,annual,US,commercial co2 emissions,CC,natural gas,NG,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Gas,annual,US,residential co2 emissions,RC,natural gas,NG,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Oil,annual,US,commercial co2 emissions,CC,petroleum,PE,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Buildings|Oil,annual,US,residential co2 emissions,RC,petroleum,PE,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Industry,annual,US,industrial co2 emissions,IC,all fuels,TO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Industry|Coal,annual,US,industrial co2 emissions,IC,coal,CO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Industry|Gas,annual,US,industrial co2 emissions,IC,natural gas,NG,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Industry|Oil,annual,US,industrial co2 emissions,IC,petroleum,PE,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Transportation,annual,US,transportation co2 emissions,TC,all fuels,TO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Transportation|Coal,annual,US,transportation co2 emissions,TC,coal,CO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Transportation|Gas,annual,US,transportation co2 emissions,TC,natural gas,NG,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Demand|Transportation|Oil,annual,US,transportation co2 emissions,TC,petroleum,PE,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy,annual,US,total co2 emissions from all sectors,TT,all fuels,TO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Coal,annual,US,total co2 emissions from all sectors,TT,coal,CO,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Gas,annual,US,total co2 emissions from all sectors,TT,natural gas,NG,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"
+Emissions|CO2|Energy|Oil,annual,US,total co2 emissions from all sectors,TT,petroleum,PE,1,,,"CO2 emission aggregates by fuel, state, and sector. Report and documentation: https://www.eia.gov/environment/emissions/state/"

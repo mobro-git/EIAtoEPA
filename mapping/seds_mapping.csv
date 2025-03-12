@@ -1,0 +1,6 @@
+﻿variable,seriesDescription,seriesId,multiplier,notes,notes_variable,source
+Final Energy|Coal,Coal total end-use consumption,CLTXB,1,,,State Energy Data System
+Primary Energy|Geothermal,Geothermal energy total consumption,GETCB,1,,,State Energy Data System
+Primary Energy|Oil,All petroleum products total consumption,PATCB,1,,,State Energy Data System
+Primary Energy,"Primary energy total consumption, adjusted for process fuel, intermediate products, and fuels with no direct cost",PESCB,1,,,State Energy Data System
+Final Energy,Total end-use sector energy consumption,TETXB,1,,,State Energy Data System

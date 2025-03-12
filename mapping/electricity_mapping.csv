@@ -1,37 +1,37 @@
-subdirectory,frequency,data,data_name,Variable,fueltypeid,fueltype_name,location,location_name,sectorid,sector_name,multiplier,notes,notes_variable
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,NG,natural gas,US,U.S. total,99,All Sectors,1,not in template anymore,Primary Energy|Gas|Electricity
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,PC,petroleum coke,US,U.S. total,99,All Sectors,1,not in template anymore,Primary Energy|Oil|Electricity
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,PEL,petroleum liquids,US,U.S. total,99,All Sectors,1,not in template anymore,Primary Energy|Oil|Electricity
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,ALL,all fuels,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,BIO,biomass,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,COW,all coal products,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,DFO,distillate fuel oil,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,DPV,estimated small scale solar pv,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,GEO,geothermal,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,NUC,nuclear,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,PET,petroleum,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,SPV,solar photovoltaic,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,SUN,solar,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,TPV,estimated total solar pv,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,TSN,estimated total solar,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,WND,wind,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,WNS,offshore wind turbine,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,WNT,onshore wind turbine,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,WWW,wood and wood wastes,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity,ALL,all fuels,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Coal,COW,all coal products,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Solar|PV,DPV,estimated small scale solar pv,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Geothermal,GEO,geothermal,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,,HPS,hydro-electric pumped storage,US,U.S. total,99,All Sectors,1,not in EMF template?,Secondary Energy|Electricity|Storage|PSH
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Hydro,HYC,conventional hydroelectric,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Gas,NG,natural gas,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Nuclear,NUC,nuclear,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,,OTH,other,US,U.S. total,99,All Sectors,1,not in EMF template,Secondary Energy|Electricity|Other
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Oil,PC,petroleum coke,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Oil,PEL,petroleum liquids,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Solar|PV,SPV,solar photovoltaic,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Solar|CSP,STH,solar thermal,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Solar,TSN,estimated total solar,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Biomass,WAS,renewable waste products,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Wind,WND,wind,US,U.S. total,99,All Sectors,1,,
-electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Biomass,WWW,wood and wood wastes,US,U.S. total,99,All Sectors,1,,
+subdirectory,frequency,data,data_name,variable,fueltypeid,fueltype_name,location,location_name,sectorid,sector_name,multiplier,notes,notes_variable,source
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,NG,natural gas,US,U.S. total,99,All Sectors,1,not in template anymore,Primary Energy|Gas|Electricity,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,PC,petroleum coke,US,U.S. total,99,All Sectors,1,not in template anymore,Primary Energy|Oil|Electricity,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,PEL,petroleum liquids,US,U.S. total,99,All Sectors,1,not in template anymore,Primary Energy|Oil|Electricity,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,ALL,all fuels,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,BIO,biomass,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,COW,all coal products,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,DFO,distillate fuel oil,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,DPV,estimated small scale solar pv,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,GEO,geothermal,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,NUC,nuclear,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,PET,petroleum,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,SPV,solar photovoltaic,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,SUN,solar,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,TPV,estimated total solar pv,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,TSN,estimated total solar,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,WND,wind,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,WNS,offshore wind turbine,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,WNT,onshore wind turbine,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,consumption-for-eg-btu,Consumption of Fuels for Electricity Generation,,WWW,wood and wood wastes,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity,ALL,all fuels,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Coal,COW,all coal products,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Solar|PV,DPV,estimated small scale solar pv,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Geothermal,GEO,geothermal,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Storage|PSH,HPS,hydro-electric pumped storage,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Hydro,HYC,conventional hydroelectric,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Gas,NG,natural gas,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Nuclear,NUC,nuclear,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Other,OTH,other,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Oil,PC,petroleum coke,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Oil,PEL,petroleum liquids,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Solar|PV,SPV,solar photovoltaic,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Solar|CSP,STH,solar thermal,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Solar,TSN,estimated total solar,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Biomass,WAS,renewable waste products,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Wind,WND,wind,US,U.S. total,99,All Sectors,1,,,EIA-923
+electric-power-operational-data,annual,generation,Utility Scale Electricity Net Generation,Secondary Energy|Electricity|Biomass,WWW,wood and wood wastes,US,U.S. total,99,All Sectors,1,,,EIA-923
