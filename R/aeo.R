@@ -33,6 +33,22 @@ get_aeo_raw = function(aeo_mapping, config) {
   
 }
 
+# pull data by tableID for a singular AEO vintage
+get_aeo_raw_by_table = function(year, tables, config) {
+  
+    data_raw = eia_data_big(
+      dir = paste0("aeo/",year),
+      data = "value",
+      facets = list(
+        scenario = c(paste0("ref",year), config$aeo_scen),
+        tableId = tables)
+    )
+    
+    data_raw_clean = data_raw %>%
+      mutate(vintage = paste0("AEO ",year))
+    
+}
+
 
 # map AEO raw data to IPCC-style variables
 map_aeo_raw = function(aeo_raw, aeo_mapping) {

@@ -17,7 +17,7 @@ tar_plan(
   
   # config ----
   config = list(
-    aeo_yr = c(2019, 2020, 2021, 2022, 2023),
+    aeo_yr = c(2019, 2020, 2021, 2022, 2023, 2025),
     aeo_scen = c( # !!! reference scenarios automatically selected
       # high and low oil and gas supply
       "highogs", "lowogs",
@@ -35,6 +35,16 @@ tar_plan(
   ## data 
   aeo_raw = get_aeo_raw(aeo_mapping, config),
   aeo_mapped = map_aeo_raw(aeo_raw, aeo_mapping),
+  
+  aeo_raw_to_csv = write.csv(aeo_raw, "output/aeo_raw_data.csv"),
+  
+  # Temp target for USREP oil and gas updates
+  aeo_oil_gas_raw_data = get_aeo_raw_by_table(
+    2025,
+    c("1","11","12","13","14","18","2","3","34","35", "6","70","71","72","76","77","78","81","90"),
+    config),
+  
+  aeo_oil_gas_raw_data_csv = write.csv(aeo_oil_gas_raw_data, "output/aeo_oil_gas_raw_data.csv"),
   
   # Electricity Data Browser ----
   
